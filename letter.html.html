@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To Sarah 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      text-align: center;
+    }
+
+    .letter {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .plane-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .send-btn {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background: #ff80ab;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.3s ease;
+    }
+
+    .send-btn:hover {
+      background: #ff4d94;
+    }
+
+    .paper-plane {
+      position: absolute;
+      width: 60px;
+      opacity: 0;
+      z-index: 10;
+      top: 0;
+      left: 0;
+    }
+
+    .fly {
+      opacity: 1;
+      animation: flyLoop 6s ease-in-out forwards;
+    }
+
+    @keyframes flyLoop {
+      0% {
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, 0) rotate(0deg);
+        opacity: 1;
+      }
+      20% {
+        top: 60%;
+        left: 80%;
+        transform: rotate(20deg);
+      }
+      40% {
+        top: 20%;
+        left: 60%;
+        transform: rotate(45deg);
+      }
+      60% {
+        top: 10%;
+        left: 20%;
+        transform: rotate(10deg);
+      }
+      80% {
+        top: 40%;
+        left: 10%;
+        transform: rotate(25deg);
+      }
+      100% {
+        top: -100px;
+        left: 120%;
+        transform: rotate(60deg);
+        opacity: 0;
+      }
+    }
+
+    .thank-you {
+      display: none;
+      text-align: center;
+      margin-top: 60px;
+      font-size: 1.2rem;
+      color: #d63384;
+      font-family: 'Poppins', sans-serif;
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="letter">
+    <h1>Dear Sarah,</h1>
+    <p>
+      I’ve been thinking about what you said.  
+      And you were right.
+    </p>
+    <p>
+      You deserve someone who shows up —  
+      not just in words, but in presence, in effort, in sincerity.
+    </p>
+    <p>
+      I haven’t always been that person… but I want to be.  
+      I want to be present in our relationship — fully, with fewer distractions, more intention, and honesty.
+    </p>
+    <p>  
+      Thank you for being patient with me.  
+      Let this be a new beginning — softer, truer, and more grounded.
+    </p>
+    <p>  
+      Yours,  
+      <br><strong>Me 💌</strong>
+    </p>
+
+    <div class="plane-container">
+      <button class="send-btn" onclick="flyPlane()">Send from my heart 💌</button>
+      <img src="4acf63cc-b337-4dcf-aa68-2710e67893d6.jpg" class="paper-plane" id="paperPlane" />
+    </div>
+
+    <div id="thankYou" class="thank-you">Thank you for reading, Sarah 💗</div>
+  </div>
+
+  <script>
+    function flyPlane() {
+      const plane = document.getElementById('paperPlane');
+      const thankYou = document.getElementById('thankYou');
+      plane.classList.add('fly');
+
+      setTimeout(() => {
+        thankYou.style.display = 'block';
+      }, 6000);
+    }
+  </script>
+</body>
+</html>
